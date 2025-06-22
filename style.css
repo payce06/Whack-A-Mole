@@ -24,3 +24,24 @@ scoreboard {
     justify-content: center;
     margin: 30px auto;
 }
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #654321;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transition: bottom 0.3s;
+    cursor: pointer;
+    display: none;
+}
