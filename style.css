@@ -45,3 +45,15 @@ scoreboard {
     cursor: pointer;
     display: none;
 }
+
+.mole.up {
+    bottom: 20px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
