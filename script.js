@@ -31,3 +31,27 @@ function showMole() {
         mole.onclick = null;
     }, 1000);
 }
+
+function startGame() {
+    score = 0;
+    timeLeft = 30;
+    scoreDisplay.textCnotent = score;
+    timeDisplay.textContent = timeLeft;
+
+    clearInterval(gameTimer);
+    clearInterval(moleTimer);
+
+    moleTimer = setInterval(showMole, 800);
+
+    gameTimer = setInterval(() => {
+        timeLeft--;
+        timeDisplay.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(gameTimer);
+            clearInterval(moleTimer);
+            alert(`Game Over! Your score is ${score}.`);
+        }
+    }, 1000);
+}
+
+startButton.onclick = startGame;
